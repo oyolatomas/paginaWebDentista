@@ -1,0 +1,503 @@
+/* .row>*,
+.form-row>*{
+    border: 1px solid red; //codigo para ver el comportamiento de las columnas
+} */
+/*-------------------------------------
+1. TIPOGRAFIA DEL SITIO
+--------------------------------------*/
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #696969; }
+
+/*-------------------------------------
+2. ESTILOS GENERALES DE BOTONES
+--------------------------------------*/
+.btn {
+  border-radius: 2rem;
+  padding: .6rem 2rem;
+  font-weight: bold; }
+
+/* Estilos btn-primary */
+.btn-primary {
+  color: #fff;
+  background-color: #00ad75;
+  border-color: #00ad75;
+  /* -----------Descomentar para darle vida-----------  */
+  /* position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .3s ease; */ }
+
+.btn-primary:hover {
+  color: #35363c;
+  background-color: white;
+  border-color: #00ad75; }
+
+.btn-primary:active {
+  color: #35363c !important;
+  background-color: #009464 !important;
+  border-color: #00d691 !important; }
+
+.btn-primary:focus {
+  /* ESTILOS DEL PROFESOR
+  color: $secundario !important;
+  box-shadow: 0 0 0 0.2rem rgba($principal, .5) !important;
+  background-color: white;
+  border-color: lighten($principal, 8%) !important; */
+  color: #35363c;
+  background-color: white;
+  border-color: #00ad75;
+  -webkit-box-shadow: 0 0 0 0.15rem #00d691 !important;
+          box-shadow: 0 0 0 0.15rem #00d691 !important; }
+
+/* Con esto agrego la flechita despues de "Reservar una cita" */
+.btn-primary::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: .6rem;
+  top: .08rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+/* Con esto se mueve la flechita hacia la izq */
+.btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after {
+  left: .25rem;
+  top: .08rem; }
+
+/* Clase que se le aplica al usar el script de scroll */
+.active-first {
+  color: #fff !important;
+  background-color: #00ad75 !important;
+  border-color: #00ad75 !important; }
+
+.active-first:hover {
+  color: #35363c !important;
+  background-color: white !important;
+  border-color: #00ad75 !important; }
+
+.active-first:active {
+  color: #35363c !important;
+  background-color: #009464 !important;
+  border-color: #00d691 !important; }
+
+/* -----------Descomentar para darle vida-----------  */
+/* .btn-primary:before {
+    content: "";
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: skew(45deg, 0);
+    transition: all .4s ease;
+}
+
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+    width: 130%;
+    left: -15%;
+} */
+/*-------------------------------------
+3. ESTILOS COLOR PRINCIPAL 
+--------------------------------------*/
+.bg-primary {
+  background-color: #00ad75 !important; }
+
+.text-primary {
+  color: #00ad75 !important; }
+
+/*-------------------------------------
+4. ESTILOS COLOR SECUNDARIO 
+--------------------------------------*/
+.bg-secondary {
+  background-color: #35363c !important; }
+
+.text-secondary {
+  color: #35363c !important; }
+
+/*-------------------------------------
+5. ESTILOS PARA ".redes-sociales" 
+--------------------------------------*/
+.redes-sociales li a i {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: .6rem 1rem;
+  opacity: .8;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+
+.redes-sociales li a i:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.5) rotate(360deg);
+          transform: scale(1.5) rotate(360deg); }
+
+/*-------------------------------------
+6. ESTILOS PARA "#menu-navegacion" 
+--------------------------------------*/
+/* Quitamos estilos al boton por defecto */
+#menu-navegacion .navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0; }
+
+/* Estilos boton del menu personalizado */
+/* Es importante que el cambio vaya despues del primero (como se hizo aca) */
+#menu-navegacion .boton-menu:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0c9";
+  font-weight: 900;
+  font-size: 2rem;
+  color: white; }
+
+#menu-navegacion .icono-cerrar:before {
+  content: "\f00d"; }
+
+/* Estilos de los enlaces del #menu-navegacion */
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #41424a; }
+
+.navbar-dark .navbar-nav .nav-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f054";
+  font-weight: 900;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg); }
+
+/* Estilos para el enlace activo */
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #00ad75; }
+
+/* Clase cuando la barra de navegacion se fija en la parte superiod */
+.menu-fijo {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #1d1e21 !important;
+  width: 100% !important; }
+
+/*-------------------------------------
+7. ESTILOS PARA "#animacion" 
+--------------------------------------*/
+.swiper-slide {
+  height: 34rem;
+  /* 450pc */
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center center; }
+
+.swiper-slide::before {
+  /* Para los pseudoelementos hay que poner dos veces dos puntos */
+  /* el padre debe tener position: relative; (en este caso seria .swiper-slide) que por defecto lo tiene entonces no modifico nada */
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.29);
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  color: #00ad75;
+  background-color: rgba(0, 0, 0, 0.46); }
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f060"; }
+
+.swiper-button-next::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+/* -------Estilos para el paginador------- */
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .4rem !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #00ad75; }
+
+/*-------------------------------------
+8. ESTILOS PARA "#bienvenidos" 
+--------------------------------------*/
+.contenedor-video a {
+  background-color: rgba(255, 255, 255, 0.79);
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  color: #00ad75;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-clip: padding-box;
+  border: 0 solid transparent;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.contenedor-video a:hover {
+  background-color: #00ad75;
+  color: white;
+  border: 10px solid #efefefc9; }
+
+.contenedor-video img {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.contenedor-video:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
+
+/*-------------------------------------
+9. ESTILOS PARA "#te-ayudamos" 
+--------------------------------------*/
+#te-ayudamos {
+  position: relative;
+  -webkit-transform: skew(0, 6deg);
+          transform: skew(0, 6deg); }
+
+#te-ayudamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.52);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+#te-ayudamos .container {
+  -webkit-transform: skew(0, -6deg);
+          transform: skew(0, -6deg); }
+
+/*-------------------------------------
+10. ESTILOS PARA "#premios" 
+--------------------------------------*/
+.contador-linea {
+  background-color: #00ad75;
+  width: 4rem;
+  height: .4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+#premios .col-6:hover .contador-linea {
+  bottom: .7rem;
+  -webkit-transform: translate(-50%) rotate(180deg);
+          transform: translate(-50%) rotate(180deg);
+  background-color: #35363c; }
+
+/*-------------------------------------
+11. ESTILOS PARA "#nuestra-app" 
+--------------------------------------*/
+#nuestra-app::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* left,top,right,bottom son para que el sombreado gris se aplique a toda la seccion.
+  Si no coloco eso, la seccion queda sin cambios */ }
+
+/*-------------------------------------
+12. ESTILOS PARA "#contacto" 
+--------------------------------------*/
+.detalle-rectangulo {
+  position: absolute;
+  content: "\f45c";
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #00ad75;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) translateY(50%) rotate(45deg);
+          transform: translateX(-50%) translateY(50%) rotate(45deg); }
+
+.input-group-cita {
+  margin-bottom: 0;
+  cursor: pointer; }
+
+/*-------------------------------------
+13. ESTILOS PARA PickADate 
+--------------------------------------*/
+.picker__box {
+  border: 3px solid #00ad75; }
+
+.picker--focused .picker__day--selected,
+.picker__day--selected,
+.picker__day--selected:hover {
+  background: #00ad75;
+  color: #fff; }
+
+.picker__day--today:before {
+  border-top: .5em solid white; }
+
+.picker__select--month,
+.picker__select--year {
+  margin-top: -.5em;
+  padding: 0 .5rem;
+  border-radius: .5rem; }
+
+.picker--focused .picker__list-item--highlighted,
+.picker__list-item--highlighted:hover,
+.picker__list-item:hover {
+  background: #00ad75; }
+
+.picker__list-item--highlighted, .picker__list-item:hover {
+  border-color: #13a073; }
+
+.picker__list {
+  padding: .5rem; }
+
+.picker--time .picker__button--clear {
+  color: white;
+  background-color: #e20;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.picker--time .picker__button--clear:focus,
+.picker--time .picker__button--clear:hover {
+  background: #c33219;
+  cursor: pointer;
+  color: #fff; }
+
+.picker__button--clear:before {
+  width: 0rem;
+  display: none; }
+
+/* Rodea el form de color verde */
+/* .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: $principal;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem $principal;
+} */
+/*-------------------------------------
+13. ESTILOS PARA #pie-de-pagina 
+--------------------------------------*/
+.columna-inclinada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  left: -100%;
+  background: #00ad75; }
+
+.enlaces-secundario a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  display: block; }
+
+.enlaces-secundario {
+  border-bottom: 2px solid #6d6565; }
+
+/* Empieza el show de las medias queries */
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: .7rem 1.2rem;
+    border-radius: 1.5rem; }
+
+  .navbar-dark .navbar-nav .nav-link:after {
+    content: ""; }
+
+  #te-ayudamos {
+    -webkit-transform: skew(0, 3deg);
+            transform: skew(0, 3deg); }
+
+  #te-ayudamos .container {
+    -webkit-transform: skew(0, -3deg);
+            transform: skew(0, -3deg); }
+
+  .columna-inclinada::before {
+    right: 0;
+    left: -600%;
+    background: #00ad75;
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); } }
+@media (min-width: 990px) {
+  html {
+    font-size: 16px; }
+
+  .swiper-slide {
+    height: 37.5rem; } }
+@media (min-width: 990px) {
+  .swiper-slide {
+    height: 44rem; } }
+
+/*# sourceMappingURL=estilos.css.map */
